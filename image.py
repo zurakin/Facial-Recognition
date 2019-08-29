@@ -28,10 +28,10 @@ class Image:
     def search_faces(self,haar_cascade):
         try:
             self.faces = haar_cascade.detectMultiScale(self.grey,
-            scaleFactor = 1.05 , minNeighbors = 5)
+            scaleFactor = 1.1 , minNeighbors = 5)
         except:
             self.faces = haar_cascade.detectMultiScale(self.image,
-            scaleFactor = 1.05 , minNeighbors = 5)
+            scaleFactor = 1.1 , minNeighbors = 5)
 
     def detect_faces(self):
         temp_img = self.image

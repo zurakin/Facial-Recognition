@@ -11,7 +11,6 @@ def fetch_images(path,extention):
 
 def execute(images,face_cascade):
     for image in images:
-        print(image.shape)
         while image.shape[1]> 1024 or image.shape[0] >786:
             image.resize((int(image.shape[1]*0.9),int(image.shape[0]*0.9)))
         image.make_greyscale()
@@ -19,6 +18,6 @@ def execute(images,face_cascade):
         image.detect_faces()
         image.display(0)
 
-face_cascade = load_cascade(r"haar cascade\haarcascade_frontalface_default.xml")
+face_cascade = load_cascade(r"haar cascade\haarcascade_frontalface_alt.xml")
 images = fetch_images("images/","jpg")
 execute(images,face_cascade)
