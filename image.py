@@ -1,11 +1,19 @@
 import cv2
 
-
 class Image:
-    def __init__(self,img_path):
-        self.path = img_path
-        self.image = cv2.imread(img_path)
-        self.shape = self.image.shape
+    '''
+    this class is used to load and modify image ,
+    images can be recorded from a webcam or loaded
+    from the computer using the path of the image
+    '''
+    def __init__(self,image):
+        if type(image) == str:
+            self.path = image
+            self.image = cv2.imread(image)
+            self.shape = self.image.shape
+        else:
+            self.image = image
+            self.shape = image.shape
 
     def get_greyscale(self):
         return cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
@@ -21,9 +29,11 @@ class Image:
         self.shape = self.image.shape
 
     def display(self,time):
-        cv2.imshow(self.path.split('/')[0], self.image)
-        cv2.waitKey(time)
-        cv2.destroyAllWindows()
+        cv2.imshow('facial detection', self.image)
+        key = cv2.waitKey(time)
+        if key == ord('q'):
+            return False
+
 
     def search_faces(self,haar_cascade):
         try:
