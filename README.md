@@ -19,7 +19,3 @@ this program is a work in progress so it's still not very accurate and still mis
 using photos folder:
 ![alt text](https://github.com/zurakin/Facial-Recognition/blob/master/screenshots/obama.png?raw=true)
 ![alt text](https://github.com/zurakin/Facial-Recognition/blob/master/screenshots/avengers.png?raw=true)
-
-using webcam:
-![alt text](https://github.com/zurakin/Facial-Recognition/blob/master/screenshots/webcam.png?raw=true)
-![alt text](https://github.com/zurakin/Facial-Recognition/blob/master/screenshots/webcam2.png?raw=true)
